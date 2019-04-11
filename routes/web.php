@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('contenido/contenido');
 });
+
+Route::get('/maestrocabecera', 'MaestroCabeceraController@index');
+Route::post('/maestrocabecera/registrar', 'MaestroCabeceraController@store');
+Route::put('/maestrocabecera/actualizar', 'MaestroCabeceraController@update');
+Route::put('/maestrocabecera/desactivar', 'MaestroCabeceraController@desactivar');
+Route::put('/maestrocabecera/activar', 'MaestroCabeceraController@activar');
+Route::get('/maestrocabecera/listarMaestrocabecera', 'MaestroCabeceraController@listarMaestrocabecera');
+
+Route::get('/maestrodetalle', 'MaestroDetalleController@index');
+Route::post('/maestrodetalle/registrar', 'MaestroDetalleController@store');
+Route::put('/maestrodetalle/actualizar', 'MaestroDetalleController@update');
+Route::put('/maestrodetalle/desactivar', 'MaestroDetalleController@desactivar');
+Route::put('/maestrodetalle/activar', 'MaestroDetalleController@activar');

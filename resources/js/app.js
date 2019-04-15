@@ -23,6 +23,8 @@ window.Vue = require('vue');
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('maestro-cabecera', require('./components/MaestroCabecera.vue').default);
 Vue.component('maestro-detalle', require('./components/MaestroDetalle.vue').default);
+Vue.component('regitro-cotizacion', require('./components/Cotizacion.vue').default);
+Vue.component('formulario-cotizacion', require('./components/FormCotizacion.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

@@ -9,7 +9,7 @@ class MaestroDetalleController extends Controller
 {
     public function index(Request $request)
     {
-        //if(!$request-> ajax()) return redirect('/');
+        if(!$request-> ajax()) return redirect('/');
 
         $buscar = $request->buscar;
         $criterio = $request->criterio;
@@ -37,6 +37,17 @@ class MaestroDetalleController extends Controller
             ],
             'maestrodetalle' => $maestrodetalle
         ];
+    }
+
+    public function listarMaestroDetalle(Request $request){
+        if(!$request-> ajax()) return redirect('/');
+        $n_idtabla = $request->n_idtabla;
+        $maestrodetalle = Maestro_Detalles::where([
+            ['l_estado', '=', '1'],
+            ['n_id_maestrocabecera', '=', $n_idtabla]
+        ])
+        ->select('c_codigodetalle','t_nombre')->orderBy('t_nombre', 'asc')->get();
+        return ['maestrodetalle' => $maestrodetalle];
     }
 
     public function store(Request $request)

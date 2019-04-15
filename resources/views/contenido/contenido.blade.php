@@ -13,11 +13,11 @@
         </template>
 
         <template v-if="menu==3">
-            <h1>Contenido del menu 3</h1>
+            <regitro-cotizacion></regitro-cotizacion>
         </template>
 
         <template v-if="menu==4">
-            <h1>Contenido del menu 4</h1>
+           <formulario-cotizacion></formulario-cotizacion>
         </template>
 
         <template v-if="menu==5">
